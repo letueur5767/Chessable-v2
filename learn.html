@@ -1,0 +1,132 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre les échecs | Chessable</title>
+    <link rel="icon" href="./Assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/learn.css">
+</head>
+
+<body>
+    <a href="index.html">
+        <div class="logo-sm">
+            <img src="Assets/Chessable-logo-dark.png" alt="Logo Chessable">
+        </div>
+    </a>
+    <div class="main">
+        <div class="container">
+            <div class="title-img">
+                <h1>Apprenez les bases des échecs !</h1>
+                <img src="Assets/2kings.png" alt="2 rois">
+            </div>
+            <p>🤔 Débutant aux échecs ?<br><br>
+                Apprenez les bases des déplacements des pièces, les ouvertures, le roque, le milieu de jeu, la fin de partie, les échecs, les échecs et mats et les mouvements spéciaux ici !
+            </p>
+            <p>Jetons un coup d'œil à l'échiquier.</p>
+            <div class="about-board">
+                <p>Le plateau contient 8 rangées et 8 colonnes. Les rangées sont appelées "rangs" et les colonnes "colonnes". Il y a un total de 64 cases.</p>
+                <img class="chess-board-img" src="Assets/chess-board.png" alt="échiquier">
+            </div>
+            <p> 
+                Sur l'image ci-dessus, vous pouvez voir qu'il y a 6 types de pièces aux échecs.
+            </p>
+            <ol>
+                <li>Tout d'abord, nous avons les pions. Chaque joueur en possède 8, soit un total de 16 pions sur l'échiquier.</li>
+                <li>La tour - C'est une pièce importante qui vaut 5 points. Chaque joueur possède 2 tours.</li>
+                <li>Le fou - C'est aussi une pièce puissante, valant 3 points. Chaque joueur a 2 fous : un sur les cases claires et un sur les cases foncées.</li>
+                <li>Le cavalier - Cette pièce a l'avantage de pouvoir sauter par-dessus les autres pièces. Chaque joueur possède 2 cavaliers, chacun valant 3 points.</li>
+                <li>La dame - La pièce la plus puissante, valant 9 points. Chaque joueur commence avec une seule dame.</li>
+                <li>Le roi - La pièce centrale du jeu, autour de laquelle tout tourne.</li>
+            </ol>
+           
+            <div>
+                <h2>Déplacements des pièces</h2>
+                <p>
+                    Avant de commencer à jouer, voyons comment chaque pièce se déplace.
+                </p>
+                <div class="learn-pawn">
+                    <h2><img class="learn-img" src="pieces/Wpawn.png" alt=""> Pion :</h2>
+                    <ul>
+                        <li>Les pions sont les pièces les plus basiques et fondamentales du jeu.</li>
+                        <li>Ils avancent d'une case en ligne droite, mais au premier mouvement, ils peuvent avancer de 2 cases. Ils capturent en diagonale.</li>
+                        <img class="pawn-move-gif" src="Assets/pawn-moves-promotesgif.gif" alt="déplacement du pion">
+                        <li>Le pion peut être promu en une dame, une tour, un fou ou un cavalier lorsqu'il atteint l'autre extrémité du plateau.</li>
+                        <li>Le mouvement spécial du pion est la prise en passant, où il peut capturer un pion adverse qui vient d'avancer de deux cases.</li>
+                        <li>Vous pouvez voir comment le pion se déplace et capture ici ↗️</li>
+                    </ul>
+                </div>
+                <div class="learn-knight">
+                    <h2><img class="learn-img" src="pieces/Bknight.png" alt="cavalier"> Cavalier :</h2>
+                    <ul>
+                        <img class="knight-move-gif" src="Assets/knight-moves.gif" alt="">
+                        <li>Le cavalier vaut 3 points.</li>
+                        <li>Il se déplace en "L" : deux cases dans une direction, puis une perpendiculaire.</li>
+                        <li>Les cases vertes indiquent ses déplacements possibles.</li>
+                        <li>Le cavalier est utile en début de partie car il contrôle plus de cases qu'un pion.</li>
+                    </ul>
+                </div>
+                <div class="learn-bishop">
+                    <h2><img class="learn-img" src="pieces/Wbishop.png" alt="fou"> Fou :</h2>
+                    <ul>
+                        <li>Le fou contrôle les diagonales.</li>
+                        <li>Il vaut 3 points, comme le cavalier.</li>
+                        <li>Il se déplace uniquement en diagonale.</li>
+                        <img class="bishop-move-gif" src="Assets/bishop-moves.gif" alt="déplacement du fou">
+                        <li>Chaque joueur possède deux fous : un sur les cases claires et un sur les cases foncées.</li>
+                    </ul>
+                </div>
+                <div class="learn-rook">
+                    <h2><img class="learn-img" src="pieces/Brook.png" alt="tour"> Tour :</h2>
+                    <ul>
+                        <img src="Assets/rook-moves.gif" alt="déplacement de la tour" class="rook-move-gif">
+                        <li>La tour est une pièce puissante après la dame.</li>
+                        <li>Elle contrôle la colonne et la rangée où elle est placée.</li>
+                        <li>Elle vaut 5 points.</li>
+                        <li>Elle peut se déplacer dans quatre directions.</li>
+                    </ul>
+                </div>
+                <div class="learn-queen">
+                    <h2><img class="learn-img" src="pieces/Wqueen.png" alt="dame"> Dame :</h2>
+                    <ul>
+                        <img src="Assets/queen-moves.gif" alt="déplacement de la dame" class="queen-move-gif">
+                        <li>La dame est la pièce la plus puissante.</li>
+                        <li>C'est une combinaison de la tour et du fou.</li>
+                        <li>Elle contrôle les colonnes, les rangées et les diagonales.</li>
+                        <li>Elle vaut 9 points.</li>
+                    </ul>
+                </div>
+                <div class="learn-king">
+                    <h2><img class="learn-img" src="pieces/Bking.png" alt="roi"> Roi :</h2>
+                    <ul>
+                        <img class="king-moves" src="Assets/king-moves.gif" alt="déplacement du roi">
+                        <li>Le roi est la pièce la plus importante.</li>
+                        <li>Il se déplace d'une case dans n'importe quelle direction.</li>
+                        <li>Le but du jeu est de protéger son roi et de menacer celui de l'adversaire.</li>
+                    </ul>
+                </div>
+                <div class="special-rules">
+                    <h2>Mouvements spéciaux</h2>
+                    <h3>1. Le roque</h3> 
+                    <p>Le roque est le seul mouvement permettant de déplacer deux pièces simultanément : le roi et la tour.</p>
+                    <h3>2. La promotion du pion</h3>
+                    <p>Lorsqu'un pion atteint la dernière rangée, il peut être promu en une autre pièce (dame, tour, fou ou cavalier).</p>
+                    <h3>3. La prise en passant</h3>
+                    <p>Un pion peut capturer un pion adverse qui vient d'avancer de deux cases, s'il est à côté.</p>
+                </div>
+                <div class="openings">
+                    <h2>Les ouvertures</h2>
+                    <p>Les ouvertures donnent un avantage stratégique en contrôlant le centre et en développant les pièces.</p>
+                </div>
+                <div class="middle-game">
+                    <h2>Le milieu de jeu</h2>
+                    <p>Le milieu de jeu commence après le développement des pièces et se termine lorsque peu de pièces restent sur l'échiquier.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./Assets/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessable - 2 Joueurs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="styles/2-game.css">
+</head>
+
+<body>
+    <img class="bg-img" src="./Assets/chessable-bg-light.png" alt="background-img">
+
+    <!-- CHESSABLE LOGO LEFT TOP CORNER -->
+    <a href="index.html">
+        <div class="logo-sm">
+            <img src="Assets/Chessable-logo-dark.png" alt="Chessable logo">
+        </div>
+    </a>
+    <div class="theme-container absolute">
+        <div class="dropdown">
+            <button class="dropbtn">Thème du plateau</button>
+            <div class="dropdown-content">
+              <a onclick="boardtheme('#E2C5B0','#AA8C77')">
+                <div class="colorbox">
+                    <div class="woodDark"></div>
+                    <div class="woodLight"></div>
+                </div>
+                <div class="themename">
+                    Plateau en Bois
+                </div>
+              </a>
+              <a onclick="boardtheme('#C3CDDC', '#8F9EB8')">
+                <div class="colorbox">
+                    <div class="steelDark"></div>
+                    <div class="steelLight"></div>
+                </div>
+                <div class="themename">
+                    Plateau en Acier
+                </div>
+              </a>
+              <a onclick="boardtheme('#DADADA', '#ADADAD')">
+                <div class="colorbox">
+                    <div class="greyDark"></div>
+                    <div class="greyLight"></div>
+                </div>
+                <div class="themename">
+                    Plateau Gris
+                </div>
+              </a>
+              <a onclick="boardtheme('#E1C7E2', '#C399BF')">
+                <div class="colorbox">
+                    <div class="pinkDark"></div>
+                    <div class="pinkLight"></div>
+                </div>
+                <div class="themename">
+                    Plateau Rose
+                </div>
+              </a>
+            </div>
+          </div>
+    </div>
+
+    <div class="main-space">
+        <div class="stats">
+
+            <div class="black-side">
+                <div class="row">
+                    <div class="profile">
+                        <img src="Assets/black_avatar.png" alt="">
+                    </div>
+                    <div class="player-name" id="black-player-name">Joueur Noir</div>
+                </div>
+                <div id="black-time" class="player-time">
+                    <div id="bmin">10</div>:
+                    <div id="bsec">00</div>
+                </div>
+            </div>
+
+            <div class="white-side">
+                <div class="row">
+                    <div class="profile">
+                        <img src="Assets/white_avatar.png" alt="">
+                    </div>
+                    <div class="player-name" id="white-player-name">Joueur Blanc</div>
+                </div>
+                <div id="white-time" class="player-time">
+                    <div id="wmin">10</div>:
+                    <div id="wsec">00</div>
+                </div>
+                <!-- <h2 id="tog">White's Turn</h2> -->
+            </div>
+
+            <div class="flip-btn-container">
+                <div class="flip-btn">
+                    Tourner Le Plateau <button id="flipbtn" onclick="toggleflip()">Stop</button>
+                </div>
+            </div>
+        </div>
+        <!-- BOARD -->
+        <div class="board" id="board">
+            <div id="row8">
+                <li class="box" id="b801">Brook</li>
+                <li class="box" id="b802">Bknight</li>
+                <li class="box" id="b803">Bbishop</li>
+                <li class="box" id="b804">Bqueen</li>
+                <li class="box" id="b805">Bking</li>
+                <li class="box" id="b806">Bbishop</li>
+                <li class="box" id="b807">Bknight</li>
+                <li class="box" id="b808">Brook</li>
+            </div>
+            <div id="row7">
+                <li class="box" id="b701">Bpawn</li>
+                <li class="box" id="b702">Bpawn</li>
+                <li class="box" id="b703">Bpawn</li>
+                <li class="box" id="b704">Bpawn</li>
+                <li class="box" id="b705">Bpawn</li>
+                <li class="box" id="b706">Bpawn</li>
+                <li class="box" id="b707">Bpawn</li>
+                <li class="box" id="b708">Bpawn</li>
+            </div>
+            <div id="row6">
+                <li class="box" id="b601"></li>
+                <li class="box" id="b602"></li>
+                <li class="box" id="b603"></li>
+                <li class="box" id="b604"></li>
+                <li class="box" id="b605"></li>
+                <li class="box" id="b606"></li>
+                <li class="box" id="b607"></li>
+                <li class="box" id="b608"></li>
+            </div>
+            <div id="row5">
+                <li class="box" id="b501"></li>
+                <li class="box" id="b502"></li>
+                <li class="box" id="b503"></li>
+                <li class="box" id="b504"></li>
+                <li class="box" id="b505"></li>
+                <li class="box" id="b506"></li>
+                <li class="box" id="b507"></li>
+                <li class="box" id="b508"></li>
+            </div>
+            <div id="row4">
+                <li class="box" id="b401"></li>
+                <li class="box" id="b402"></li>
+                <li class="box" id="b403"></li>
+                <li class="box" id="b404"></li>
+                <li class="box" id="b405"></li>
+                <li class="box" id="b406"></li>
+                <li class="box" id="b407"></li>
+                <li class="box" id="b408"></li>
+            </div>
+            <div id="row3">
+                <li class="box" id="b301"></li>
+                <li class="box" id="b302"></li>
+                <li class="box" id="b303"></li>
+                <li class="box" id="b304"></li>
+                <li class="box" id="b305"></li>
+                <li class="box" id="b306"></li>
+                <li class="box" id="b307"></li>
+                <li class="box" id="b308"></li>
+            </div>
+            <div id="row2">
+                <li class="box" id="b201">Wpawn</li>
+                <li class="box" id="b202">Wpawn</li>
+                <li class="box" id="b203">Wpawn</li>
+                <li class="box" id="b204">Wpawn</li>
+                <li class="box" id="b205">Wpawn</li>
+                <li class="box" id="b206">Wpawn</li>
+                <li class="box" id="b207">Wpawn</li>
+                <li class="box" id="b208">Wpawn</li>
+            </div>
+            <div id="row1">
+                <li class="box" id="b101">Wrook</li>
+                <li class="box" id="b102">Wknight</li>
+                <li class="box" id="b103">Wbishop</li>
+                <li class="box" id="b104">Wqueen</li>
+                <li class="box" id="b105">Wking</li>
+                <li class="box" id="b106">Wbishop</li>
+                <li class="box" id="b107">Wknight</li>
+                <li class="box" id="b108">Wrook</li>
+            </div>
+        </div>
+        <div class="winner-screen-container" id="winner-screen-container">
+            <div class="winner-screen"> 
+                <span class="X" onclick="removewinnerscreen()">x</span>  
+                <div class="winner-display">
+                    <div class="winner-name" id="winner-name">
+                        Joueur Blanc<div>&nbsp;Gagne!</div>
+                    </div> 
+                </div>
+                <p>Congratulations!</p>
+                <div class="rematch" onclick="reloadd()">
+                    <button>Rejouer</button>
+                    <a href="index.html">
+                        <button>Menu</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var playtime = localStorage.getItem("timevalue");
+        var blackName = localStorage.getItem("blackname");
+        var whiteName = localStorage.getItem("whitename");
+        
+        document.getElementById("black-player-name").innerHTML = blackName;
+        document.getElementById("white-player-name").innerHTML = whiteName;
+        document.getElementById("bmin").innerHTML = playtime;
+        document.getElementById("wmin").innerHTML = playtime;
+    </script>
+    <script src="countdown.js"></script>
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
